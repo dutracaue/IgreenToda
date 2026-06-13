@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iGreen Energy — Economia na Conta de Luz | Mercado Livre de Energia</title>
+<meta name="description" content="Com a abertura do Mercado Livre de Energia e a Lei 15.269/2025, você pode trocar de fornecedor de energia como troca de plano de celular. Economia de até 14% para residências. Sem instalar placa, sem obra, sem fidelidade.">
+<meta name="keywords" content="EconomiaNaContaDeLuz, Descontoenergia, Green, MercadoLivreDeEnergia, Lei15.269/2025, Portabilidadedistribuidora, Descontonaenergia, Energiaeletrica, iGreen, energia solar, desconto energia eletrica">
+<meta name="robots" content="index, follow">
+<meta name="author" content="iGreen Energy">
+<meta property="og:title" content="iGreen Energy — Economize até 14% na sua conta de luz">
+<meta property="og:description" content="Portabilidade de energia chegou! Troque de fornecedor sem instalar nada. Sem obra, sem fidelidade.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://green.igreenenergy.com.br">
+
+<!-- llms.txt hint for AI crawlers -->
+<meta name="llms-txt" content="/llms.txt">
+
+<style>
+  :root {
+    --green-50: #eafbf0;
+    --green-100: #c0f0d5;
+    --green-300: #3dc878;
+    --green-500: #18a850;
+    --green-700: #0d6e35;
+    --green-900: #063d1e;
+    --gray-50: #f6f7f5;
+    --gray-100: #e8ebe5;
+    --gray-400: #7a8270;
+    --gray-700: #3a4035;
+    --gray-900: #1a1e17;
+    --white: #ffffff;
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    line-height: 1.65;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--green-900);
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .logo-leaf {
+    width: 34px;
+    height: 34px;
+    background: var(--green-300);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-leaf::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: var(--green-900);
+    border-radius: 50%;
+    transform: rotate(45deg);
+  }
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .logo-text span { color: var(--green-300); }
+  .nav-cta {
+    background: var(--green-300);
+    color: var(--green-900);
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #55d98a; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--green-900) 0%, #0a4a22 60%, #0f5a2a 100%);
+    color: var(--white);
+    padding: 4rem 1.5rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    background: rgba(61, 200, 120, 0.08);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 320px;
+    height: 320px;
+    background: rgba(61, 200, 120, 0.05);
+    border-radius: 50%;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(61,200,120,0.18);
+    color: var(--green-300);
+    border: 1px solid rgba(61,200,120,0.35);
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green-300);
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.78);
+    max-width: 540px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--green-300);
+    color: var(--green-900);
+    padding: 0.85rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.15s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #55d98a; transform: translateY(-1px); }
+  .btn-whatsapp {
+    background: #25d366;
+    color: #ffffff;
+    padding: 0.85rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.15s;
+  }
+  .btn-whatsapp:hover { transform: translateY(-1px); }
+
+  /* SAVINGS HIGHLIGHT */
+  .savings-bar {
+    background: var(--green-300);
+    color: var(--green-900);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  /* SECTION WRAPPER */
+  .section {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-500);
+    margin-bottom: 0.6rem;
+  }
+  .section h2 {
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--gray-900);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section p {
+    font-size: 1.05rem;
+    color: var(--gray-700);
+    max-width: 600px;
+    margin-bottom: 1.2rem;
+  }
+
+  /* BENEFITS GRID */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .benefit-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .benefit-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  .benefit-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+  }
+  .benefit-card p {
+    font-size: 0.88rem;
+    color: var(--gray-400);
+    margin: 0;
+  }
+
+  /* VIDEO SECTION */
+  .video-wrap {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1.5px solid var(--gray-100);
+    margin-top: 1.5rem;
+  }
+  .video-wrap iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border: none;
+  }
+
+  /* DARK SECTION */
+  .section-dark {
+    background: var(--green-900);
+    color: var(--white);
+  }
+  .section-dark .section-label { color: var(--green-300); }
+  .section-dark h2 { color: var(--white); }
+  .section-dark p { color: rgba(255,255,255,0.75); }
+
+  /* STEPS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+  }
+  .step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: var(--green-300);
+    color: var(--green-900);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    margin-top: 2px;
+  }
+  .step-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+  }
+  .step-content p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.65);
+    margin: 0;
+  }
+
+  /* LAW TAG */
+  .law-tag {
+    display: inline-block;
+    background: rgba(61,200,120,0.15);
+    color: var(--green-300);
+    border: 1px solid rgba(61,200,120,0.3);
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  /* FAQ */
+  .faq-list { margin-top: 1.5rem; }
+  .faq-item {
+    border-bottom: 1px solid var(--gray-100);
+    padding: 1rem 0;
+  }
+  .faq-q {
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: var(--gray-900);
+    margin-bottom: 0.4rem;
+  }
+  .faq-a {
+    font-size: 0.92rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+
+  /* CONTACTS */
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .contact-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .contact-card:hover { border-color: #25d366; transform: translateY(-2px); }
+  .contact-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e8f7ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.7rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--green-700);
+  }
+  .contact-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    margin-bottom: 0.3rem;
+  }
+  .contact-action {
+    font-size: 0.82rem;
+    color: #128c3e;
+    font-weight: 600;
+  }
+
+  /* LICENSE SECTION */
+  .license-section {
+    background: var(--white);
+    border-top: 3px solid var(--green-300);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    border: 1.5px solid var(--gray-100);
+    border-top: 4px solid var(--green-300);
+  }
+  .license-section h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+  .license-section p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    max-width: 500px;
+    margin: 0 auto 1.2rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--green-900);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+  footer a { color: var(--green-300); text-decoration: none; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--gray-100); }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-whatsapp { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav>
+  <a href="/" class="logo" aria-label="iGreen Energy">
+    <div class="logo-leaf" aria-hidden="true"></div>
+    <span class="logo-text">i<span>Green</span> Energy</span>
+  </a>
+  <a href="https://wa.me/18509801566?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs"
+     class="nav-cta" rel="noopener">💬 Fale conosco</a>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge">Mercado Livre de Energia · Lei 15.269/2025</div>
+  <h1>Economize até <em>14%</em> na conta de luz — sem instalar nada</h1>
+  <p class="hero-sub">Com a portabilidade de energia, você troca de fornecedor como muda de plano de celular. Sem obra, sem fidelidade, sem novos fios. E ainda ganha créditos de energia solar.</p>
+  <div class="hero-actions">
+    <a href="https://green.igreenenergy.com.br/autoconexao/?id=151034&desc=8" class="btn-primary" rel="noopener">
+      ⚡ Começar a economizar agora
+    </a>
+    <a href="https://wa.me/18509801566?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs" class="btn-whatsapp" rel="noopener">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Tirar dúvidas no Zap
+    </a>
+  </div>
+</section>
+
+<div class="savings-bar">
+  🌱 iGreen: Energia limpa, conta mais barata. Sem instalação. Sem obras. Sem fidelidade.
+</div>
+
+<!-- ═══════════════════════════════ BENEFÍCIOS ═══════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Por que a iGreen?</div>
+  <h2>O que você ganha com a portabilidade de energia</h2>
+  <p>A abertura do Mercado Livre de Energia mudou tudo. Agora você escolhe de onde vem a energia que abastece sua casa ou empresa — e paga menos por isso.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">✅</div>
+      <h3>Sem instalar placa nenhuma</h3>
+      <p>Você acessa energia solar sem painel fotovoltaico. Os créditos vêm diretamente na sua fatura.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🏗️</div>
+      <h3>Sem obra</h3>
+      <p>Nenhuma modificação na estrutura elétrica da sua casa ou empresa. Tudo funciona igual.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🔌</div>
+      <h3>Mesma estrutura e mesma distribuidora</h3>
+      <p>Os fios continuam os mesmos. A distribuidora cuida da rede. Só a fonte da energia muda.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🔓</div>
+      <h3>Sem fidelidade</h3>
+      <p>Você pode cancelar quando quiser, sem multa. Portabilidade de verdade, como no celular.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💰</div>
+      <h3>Até 14% de economia</h3>
+      <p>Desconto real na conta de luz todo mês. Para residências, condomínios e pequenas empresas.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">☀️</div>
+      <h3>Créditos de energia solar</h3>
+      <p>Sua energia vem de fontes renováveis. Você recebe créditos que reduzem o valor da fatura.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ VÍDEO PRINCIPAL ═══════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Entenda o conceito</div>
+  <h2>Como funciona o Mercado Livre de Energia?</h2>
+  <p>Em menos de 5 minutos, você entende como a portabilidade de energia funciona e por que pode começar a economizar agora.</p>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/uX_HmMIwkN8"
+      title="Mercado Livre de Energia — Como funciona"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ COMO FUNCIONA A CONEXÃO ═══════════════════════════════ -->
+<div class="section-dark">
+  <div class="section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+    <span class="law-tag">Lei 15.269/2025 · Portabilidade de Distribuidora</span>
+    <div class="section-label" style="color: #3dc878;">Entenda como funciona</div>
+    <h2>A conexão Green: simples como trocar de operadora</h2>
+    <p>Graças à Lei 15.269/2025, a portabilidade de distribuidora chegou ao Brasil. Veja como é fácil:</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Você se cadastra</h3>
+          <p>Preenche um formulário rápido com seus dados e os dados da sua conta de luz. Leva menos de 5 minutos.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>iGreen processa a mudança</h3>
+          <p>Sem burocracia. A iGreen cuida de tudo com a distribuidora local. Você não precisa fazer nada.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Créditos de solar aparecem na fatura</h3>
+          <p>Sua próxima conta já chega com o desconto. A mesma distribuidora, os mesmos fios — só o fornecedor mudou.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Você economiza todo mês</h3>
+          <p>Até 14% de desconto todo mês, automaticamente. Sem nenhum trabalho adicional da sua parte.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-wrap" style="margin-top: 2rem; border-color: rgba(255,255,255,0.1);">
+      <iframe
+        src="https://www.youtube.com/embed/iSert_gqEgo"
+        title="Como funciona a conexão iGreen Energy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ FAQ ═══════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2>Perguntas que todo mundo faz antes de aderir</h2>
+
+  <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Como funciona o desconto na conta de luz?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Você adere ao Mercado Livre de Energia através da iGreen. Créditos de energia solar são aplicados diretamente na sua fatura mensal, gerando um desconto de até 14% para residências. Nenhuma instalação ou obra é necessária.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Preciso instalar painel solar na minha casa?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Não. Você recebe créditos de energia solar gerada em usinas parceiras da iGreen. Sem placa, sem obra, sem nada instalado em casa. A estrutura elétrica da sua residência permanece exatamente igual.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Quanto custa para aderir à iGreen?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">A adesão é gratuita. Você não paga nada para trocar de fornecedor. O benefício é imediato: sua fatura mensal já começa a chegar com desconto sem nenhum custo inicial.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Quais são os prazos para começar a economizar?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">O cadastro leva menos de 5 minutos. Após a adesão, a iGreen processa a migração junto à distribuidora e o desconto aparece nas próximas faturas, geralmente em 1 a 2 ciclos de faturamento.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Posso cancelar quando quiser?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Sim. Não há fidelidade nem multa por cancelamento. Você pode voltar à distribuidora tradicional a qualquer momento, assim como funciona a portabilidade de número de celular.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">A distribuidora ou a rede elétrica muda?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Não. Os fios, a distribuidora responsável pela rede e o medidor continuam os mesmos. Só a fonte da energia que você consome muda — passa a ser solar, mais limpa e mais barata.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Essa economia se aplica à minha região?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">A iGreen atua em diversas regiões do Brasil. Entre em contato pelo WhatsApp com um dos nossos atendentes para verificar a disponibilidade na sua cidade e distribuidora específica.</span>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">O que é a Lei 15.269/2025?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">A Lei 15.269/2025 regulamenta a abertura do Mercado Livre de Energia para consumidores residenciais e pequenas empresas no Brasil. Ela permite a portabilidade de distribuidora, ou seja, você pode escolher seu fornecedor de energia como já faz com operadoras de celular.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ CONTATO ═══════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Atendimento</div>
+  <h2>Fale com um de nossos especialistas</h2>
+  <p>Tire dúvidas, verifique disponibilidade na sua cidade, ou comece o cadastro agora mesmo. Nossa equipe responde pelo WhatsApp.</p>
+
+  <div class="contacts-grid">
+    <a href="https://wa.me/18509801566?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs"
+       class="contact-card" rel="noopener" aria-label="Falar com Cauê no WhatsApp">
+      <div class="contact-avatar">CA</div>
+      <div class="contact-name">Cauê</div>
+      <div class="contact-action">💬 Conversar no WhatsApp</div>
+    </a>
+    <a href="https://wa.me/5519997782640?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs"
+       class="contact-card" rel="noopener" aria-label="Falar com Thiago no WhatsApp">
+      <div class="contact-avatar">TH</div>
+      <div class="contact-name">Thiago</div>
+      <div class="contact-action">💬 Conversar no WhatsApp</div>
+    </a>
+    <a href="https://wa.me/5511958209804?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs"
+       class="contact-card" rel="noopener" aria-label="Falar com Roseli no WhatsApp">
+      <div class="contact-avatar">RO</div>
+      <div class="contact-name">Roseli</div>
+      <div class="contact-action">💬 Conversar no WhatsApp</div>
+    </a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ SEJA LICENCIADO ═══════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Oportunidade de negócio</div>
+  <h2>Seja um licenciado iGreen e ganhe ajudando as pessoas a economizar</h2>
+  <p>Você pode indicar a iGreen para amigos, familiares e clientes — e ser remunerado por cada contrato gerado. Construa uma renda recorrente ajudando as pessoas a pagar menos na conta de luz.</p>
+
+  <div class="license-section">
+    <h3>🌱 Expanda com a iGreen</h3>
+    <p>Torne-se um licenciado e faça parte de uma rede que cresce com a abertura do Mercado Livre de Energia no Brasil.</p>
+    <a href="https://expansao.igreenenergy.com.br/?id=151034&checkout=true"
+       class="btn-primary" style="background: var(--green-500); color: #fff; display: inline-block;" rel="noopener">
+      Quero ser licenciado iGreen →
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ CTA FINAL ═══════════════════════════════ -->
+<div class="section-dark">
+  <div class="section" style="text-align: center; padding-top: 3.5rem; padding-bottom: 3.5rem;">
+    <div class="section-label">Comece agora</div>
+    <h2>Sua próxima fatura já pode ser menor</h2>
+    <p style="max-width: 480px; margin: 0 auto 2rem;">Sem instalação, sem obra, sem fidelidade. Cadastro em 5 minutos e desconto de até 14% todo mês.</p>
+    <div class="hero-actions">
+      <a href="https://green.igreenenergy.com.br/autoconexao/?id=151034&desc=8"
+         class="btn-primary" rel="noopener">⚡ Aderir agora — é gratuito</a>
+      <a href="https://wa.me/18509801566?text=ol%C3%A1%2C+eu+tamb%C3%A9m+quero+economizar+at%C3%A9+14%25+de+energia+el%C3%A9trica+todo+m%C3%AAs"
+         class="btn-whatsapp" rel="noopener">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no Zap
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <p><strong style="color:#ffffff;">iGreen Energy</strong> · Energia limpa, conta mais barata</p>
+  <p style="margin-top:0.4rem;">
+    <a href="https://green.igreenenergy.com.br/autoconexao/?id=151034&desc=8" rel="noopener">Aderir agora</a> ·
+    <a href="https://expansao.igreenenergy.com.br/?id=151034&checkout=true" rel="noopener">Seja licenciado</a>
+  </p>
+  <p style="margin-top:0.8rem; font-size:0.78rem;">
+    #EconomiaNaContaDeLuz #EnergiaSolar #iGreen #MercadoLivreDeEnergia #Lei15.269/2025<br>
+    #Descontoenergia #Portabilidadedistribuidora #Descontonaenergia #Energiaeletrica
+  </p>
+</footer>
+
+<!-- ═══════════════════════════════ SCHEMA MARKUP ═══════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "iGreen Energy",
+      "url": "https://green.igreenenergy.com.br",
+      "description": "iGreen Energy oferece portabilidade de energia elétrica no Mercado Livre de Energia, com economia de até 14% na conta de luz para residências e pequenas empresas. Sem instalação de painéis solares, sem obra e sem fidelidade.",
+      "sameAs": [],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Portabilidade de Energia Elétrica",
+      "provider": {
+        "@type": "Organization",
+        "name": "iGreen Energy"
+      },
+      "description": "Troca de fornecedor de energia elétrica no Mercado Livre de Energia conforme Lei 15.269/2025. Desconto de até 14% para residências. Sem instalação, sem obra, sem fidelidade.",
+      "serviceType": "Fornecimento de energia solar via créditos",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Economia de até 14% na conta de luz todo mês",
+        "price": "0",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "description": "Adesão gratuita. Desconto aplicado diretamente na fatura mensal."
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como funciona o desconto na conta de luz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você adere ao Mercado Livre de Energia através da iGreen. Créditos de energia solar são aplicados diretamente na sua fatura mensal, gerando um desconto de até 14% para residências. Nenhuma instalação ou obra é necessária."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso instalar painel solar na minha casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Você recebe créditos de energia solar gerada em usinas parceiras da iGreen. Sem placa, sem obra, sem nada instalado em casa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa para aderir à iGreen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A adesão é gratuita. Você não paga nada para trocar de fornecedor. O benefício é imediato: sua fatura mensal já começa a chegar com desconto sem nenhum custo inicial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cancelar quando quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Não há fidelidade nem multa por cancelamento. Você pode voltar à distribuidora tradicional a qualquer momento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a Lei 15.269/2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Lei 15.269/2025 regulamenta a abertura do Mercado Livre de Energia para consumidores residenciais e pequenas empresas no Brasil, permitindo a portabilidade de distribuidora — você escolhe seu fornecedor de energia como já faz com operadoras de celular."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
