@@ -16,4 +16,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://green.igreenenergy.com.br/sitemap.xml
+Sitemap: https://dutracaue.github.io/IgreenToda/sitemap.xml
